@@ -1,0 +1,209 @@
+
+/*@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap');
+
+
+
+*
+{
+    box-sizing: border-box;
+}
+
+
+
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, #e90532, #ec282a, #ef3c22, #f04c19, #f15b0b);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+
+h1
+{
+    color: black;
+    font-family: 'Acme', sans-serif;
+    font-size: 40px;
+    margin-top: 15px;
+}
+
+
+p 
+{
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.7em;
+    margin-top: 1px;
+}
+
+/*
+.btn
+{
+    color: rgb(0, 0, 0);
+    background: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: none;
+    font-size: 20px;
+    padding: 5px 12px;
+    width: 115px; 
+    height: 40px;
+}
+*/
+
+
+.btn 
+{
+    display: inline-block;
+    background: white;
+    color: black;
+    padding: 5px 12px;
+    width: 115px; 
+    height: 40px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+
+.btn::before 
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f1ee0fd8;
+    z-index: -1;
+    transition: transform 0.3s, background 0.3s;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.btn:hover::before 
+{
+  transform: scaleX(1);
+}
+
+
+
+.conversor-imagen
+{
+    width: 150px;
+    margin-top: 8px;
+}
+
+
+.moneda
+{
+    padding: 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.moneda select
+{
+    padding: 10px 20px 10px 10px;
+    border: 1px solid #dedede;
+    font-size: 16px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    margin-right: 2px;
+}
+
+
+.moneda input 
+{
+    border: 0;
+    font-size: 30px;
+    text-align: right;
+}
+
+
+.taza-cambio-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.cambio
+{
+    color: white;
+    font-size: 20px;
+    padding: 0 10px;
+    font-weight: 600;
+    font-family: 'Signika', sans-serif;
+}
+
+
+
+footer 
+{
+    display: block;
+}
+
+
+footer p 
+{
+    margin: 0;
+}
+
+
+
+select:focus, input:focus, button:focus
+{
+    outline: 0;
+}
+
+
+
+@media (max-width:600px) 
+{
+
+    .moneda input
+    {
+        width: 200px;
+    }
+    
+}
+
+
+@media (max-width: 768px) 
+{
+    .conversor-imagen 
+    {
+        max-width: 100;
+        height: auto;
+        margin-top: 140px;
+    }
+}
+
+
